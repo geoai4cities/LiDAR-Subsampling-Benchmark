@@ -32,19 +32,19 @@ This repository provides a comprehensive benchmarking framework for evaluating p
 
 ![mIoU and GPU Memory](docs/figures/01_ptv3_metric_grouped.png)
 
-*Left: mIoU performance of all subsampling methods across loss levels (30%–90%) with baseline reference (dashed line). Right: GPU memory consumption during training. Higher loss levels reduce memory usage but degrade segmentation accuracy.*
+*PTv3 experimental results on SemanticKITTI dataset. Left panel: Mean Intersection over Union (mIoU) across subsampling methods and loss levels. Colored bars represent mIoU when tested on subsampled data; solid black circles indicate mIoU when tested on original (non-subsampled) data. Error bars show standard deviation across 3 random seeds for stochastic methods (RS, FPS, SB); for IDIS at 90% loss, error bars represent mIoU variation across R-values (R=5, 15, 20m). The dashed horizontal line indicates baseline mIoU (0.672). Right panel: Peak GPU memory consumption (GB). The dashed line indicates baseline GPU requirement (86 GB).*
 
 ### Method Ranking Across Loss Levels
 
 ![Ranking Bump Chart](docs/figures/03_ptv3_ranking_bump_chart.png)
 
-*mIoU ranking of subsampling methods across increasing point loss levels (30%–90%). IDIS and FPS maintain top ranks at moderate loss, while DEPOCO degrades sharply at higher loss levels.*
+*Method ranking evolution across loss levels (30% → 50% → 70% → 90%). Each line tracks a method's rank position (1 = best, 7 = worst) based on mIoU when tested on original data. mIoU values annotated at each point; bold values indicate performance ≥ baseline (0.672).*
 
 ### Class-wise Performance Analysis (30% Loss)
 
 ![Class-wise mIoU and Point Retention](docs/figures/04_classwise_loss30.png)
 
-*(A) Class-wise mIoU (Test → Original Data) across 19 semantic categories. (B) Class-wise point retention showing how each method preserves points per category.*
+*Class-wise mIoU (Panel A) and point retention rates (Panel B) at 30% loss (PTv3, SemanticKITTI).*
 
 ---
 
