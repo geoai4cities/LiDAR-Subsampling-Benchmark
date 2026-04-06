@@ -28,6 +28,12 @@ This repository provides a comprehensive benchmarking framework for evaluating p
 
 ## Key Results
 
+### mIoU and GPU Memory Usage
+
+![mIoU and GPU Memory](docs/figures/01_ptv3_metric_grouped.png)
+
+*Left: mIoU performance of all subsampling methods across loss levels (30%–90%) with baseline reference (dashed line). Right: GPU memory consumption during training. Higher loss levels reduce memory usage but degrade segmentation accuracy.*
+
 ### Method Ranking Across Loss Levels
 
 ![Ranking Bump Chart](docs/figures/03_ptv3_ranking_bump_chart.png)
