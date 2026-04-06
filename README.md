@@ -26,6 +26,22 @@ This repository provides a comprehensive benchmarking framework for evaluating p
 
 ---
 
+## Key Results
+
+### Method Ranking Across Loss Levels
+
+![Ranking Bump Chart](docs/figures/03_ptv3_ranking_bump_chart.png)
+
+*mIoU ranking of subsampling methods across increasing point loss levels (30%–90%). IDIS and FPS maintain top ranks at moderate loss, while DEPOCO degrades sharply at higher loss levels.*
+
+### Class-wise Performance Analysis (30% Loss)
+
+![Class-wise mIoU and Point Retention](docs/figures/04_classwise_loss30.png)
+
+*(A) Class-wise mIoU (Test → Original Data) across 19 semantic categories. (B) Class-wise point retention showing how each method preserves points per category.*
+
+---
+
 ## Subsampling Methods
 
 | Method | Strategy |
@@ -223,6 +239,12 @@ Results saved to `benchmark_results/` directory.
 - **Point Transformer V3:** [Paper](https://arxiv.org/abs/2312.10035)
 - **SemanticKITTI Dataset:** [Website](http://semantic-kitti.org/)
 - **DEPOCO:** [PRBonn/deep-point-map-compression](https://github.com/PRBonn/deep-point-map-compression)
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
